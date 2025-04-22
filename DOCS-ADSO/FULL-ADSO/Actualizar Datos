@@ -1,0 +1,29 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+public class actualizarDatos {
+
+    public static void main(String[] args) {
+        String jdbcUrl = "jdbc:mysql://localhost:33066";
+        String usuario = "root";
+        String contraseña = "";
+
+        try (Connection conexion = DriverManager.getConnection(jdbcUrl, usuario, contraseña)) {
+            String sql = "UPDATE nombre_tabla SET columna1 = ?, columna2 = ? WHERE id = ?";
+try (PreparedStatement statement = conexion.prepareStatement(sql)) {
+    // Establece los nuevos valores
+    statement.setString(1, "NuevoValor1");
+    statement.setInt(2, 456);
+    statement.setInt(3, 1);  // Ajusta según la condición WHERE
+
+    // Ejecuta la consulta UPDATE
+    statement.executeUpdate();
+    System.out.println("Datos modificados correctamente.");
+}
+        } catch (SQLException e) {
+        }
+    }
+}
