@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, button, input {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.crud__title {
+    text-align: center;
+}
+
+.crud__form {
+    display: flex;
+    margin: 10px 0;
+}
+
+.form__input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.button--primary {
+    background-color: green;
+    color: white;
+
+}
+
+
+.button--secondary {
+    background-color: rgb(102, 80, 226);
+    color: rgb(248, 245, 245);
+
+}
+
+.button--tertiary {
+    background-color: rgb(117, 39, 3);
+    color: white;
+
+}
+
+
+.crud__table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.table__header, .table__body td {
+    border: 1px solid #ccc ;
+    padding: 8px;
+    
+}
+
+.table__header {
+    background-color: #f0f0f0 ;
+}
+
+
+.table__body td:nth-child(3) {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
